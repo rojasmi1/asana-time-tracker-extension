@@ -1,4 +1,0 @@
-DB Name: asana-time-tracker
-Account Password: PCorei7.2016
-User: asana-tracking
-Database Password: AsanaTracker.2017
