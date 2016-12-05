@@ -15,9 +15,6 @@
     "scripts":["event_page.js"],
     "persistent":false
   },
-  "content_scripts":[
-    {"matches":["https://app.asana.com/*"],"js":["asana_trigger.js"]}
-  ],
   "permissions":[
     "storage",
     "tabs",
