@@ -1,0 +1,27 @@
+{
+  "manifest_version":2,
+  "name": "Asana Time Tracker",
+  "description":"",
+  "version":"1.0",
+  "page_action":{
+    "default_icon":"asana-exporter-icon.png",
+    "default_title":"Asana Time Tracker",
+    "default_popup":"popup.html"
+  },
+  "icons":{
+    "128":"asana-exporter-icon.png"
+  },
+  "background":{
+    "scripts":["event_page.js"],
+    "persistent":false
+  },
+  "content_scripts":[
+    {"matches":["https://app.asana.com/*"],"js":["asana_trigger.js"]}
+  ],
+  "permissions":[
+    "storage",
+    "tabs",
+    "https://app.asana.com/"
+  ],
+  "content_security_policy": "script-src 'self' https://code.jquery.com/; object-src 'self'"
+}

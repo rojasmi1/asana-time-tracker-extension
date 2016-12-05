@@ -1,0 +1,18 @@
+h1{
+  color:#C36909;
+  font-size: 30px;
+}
+
+h2{
+  color: #FFFFFF;
+}
+
+body{
+  background: linear-gradient(#DADADA, #268EB2);
+  font-family: 'helvetica sans-serif';
+}
+
+#trackTask{
+  border-radius: 8px;
+  background-color: #D4DDE8;
+}
