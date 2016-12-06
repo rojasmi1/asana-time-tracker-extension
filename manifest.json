@@ -16,7 +16,6 @@
     "persistent":false
   },
   "permissions":[
-    "storage",
     "tabs",
     "notifications",
     "https://app.asana.com/"
