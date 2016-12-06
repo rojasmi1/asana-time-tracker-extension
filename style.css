@@ -12,6 +12,10 @@ body{
   font-family: 'helvetica sans-serif';
 }
 
+html{
+  height: 100%;
+}
+
 #trackTask{
   border-radius: 8px;
   background-color: #D4DDE8;
