@@ -16,7 +16,11 @@ html{
   height: 100%;
 }
 
-#trackTask{
+.button{
   border-radius: 8px;
   background-color: #D4DDE8;
+}
+
+.separator{
+  padding: 10px 0px;
 }
