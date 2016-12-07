@@ -1,6 +1,6 @@
 $(function(){
   chrome.storage.sync.get("apiKey",function(items){
-    var apiKey = $('#apiKey').val(items.apiKey);
+    $('#apiKey').val(items.apiKey);
   });
 
   $('#updateOptions').click(function(){
