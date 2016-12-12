@@ -24,7 +24,7 @@ html{
 }
 
 input{
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .separator{
@@ -32,5 +32,5 @@ input{
 }
 
 #asanaApiKey, #mongolabApiKey{
-  width: 250px;
+  width: 300px;
 }

@@ -8,11 +8,14 @@ This is a Google Chrome extension for tracking Asana tasks' time.
 
 
 # Changelog
-## 1.0
+* 1.0
 Base functional version of the extension that allows for time registration.
 
-##1.1
+* 1.1
 Add the possibility to updated entries.
 
-##1.2
+* 1.2
 Make Mongolab API key configurable in the extension's options.
+
+* 1.3
+Ask the user to configure the extension's options when trying to track tasks without providing the respective API Keys.

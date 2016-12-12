@@ -19,6 +19,7 @@
     "scripts":["event_page.js"],
     "persistent":false
   },
+  "web_accessible_resources": ["options.html"],
   "permissions":[
     "tabs",
     "notifications",

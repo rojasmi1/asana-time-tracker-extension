@@ -3,15 +3,22 @@ $(function(){
   chrome.storage.sync.get(["asanaApiKey","mongolabApiKey"],function(items){
     var asanaApiKey = items.asanaApiKey;
     var mongolabApiKey = items.mongolabApiKey;
-    chrome.tabs.query({active:true,currentWindow:true},function(tabs){
-    //The task id are the digits after the last slash
-    var taskId = tabs[0].url.substr(tabs[0].url.lastIndexOf('/')+1);
-    $.ajax({ url: "https://api.mlab.com/api/1/databases/asana-time-tracker/collections/task-entry?q={\"taskId\":\""+taskId+"\",\"asanaApiKey\":\""+asanaApiKey+"\"}&apiKey="+mongolabApiKey,
-          type: "GET"}).then(function(tasks){
-            console.log(tasks[0]);
-            $('#duration').val(tasks[0].duration)
-          })
-    });
+    if(asanaApiKey !== "" & typeof asanaApiKey !== "undefined" & mongolabApiKey !== "" & typeof mongolabApiKey !== "undefined"){
+      chrome.tabs.query({active:true,currentWindow:true},function(tabs){
+      //The task id are the digits after the last slash
+      var taskId = tabs[0].url.substr(tabs[0].url.lastIndexOf('/')+1);
+      $.ajax({ url: "https://api.mlab.com/api/1/databases/asana-time-tracker/collections/task-entry?q={\"taskId\":\""+taskId+"\",\"asanaApiKey\":\""+asanaApiKey+"\"}&apiKey="+mongolabApiKey,
+            type: "GET"}).then(function(tasks){
+              console.log(tasks[0]);
+              $('#duration').val(tasks[0].duration)
+            })
+      });
+    }else{
+      var notificationOptions = {type:"basic",title:"Configuration missing",message:"Please configure the extension before you start tracking tasks.",iconUrl:"asana-exporter-icon.png"};
+      chrome.notifications.create('tasktracked',notificationOptions,function(){
+        window.open(chrome.extension.getURL("options.html"));
+      });
+    } 
   });
 
 
