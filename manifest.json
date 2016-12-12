@@ -3,7 +3,7 @@
   "name": "Asana Time Tracker",
   "short_name":"ATT",
   "description":"This extension loads on Asana's tabs, and enables users to register the duration of Asana tasks in a colletion on Mongo DB.",
-  "version":"1.0",
+  "version":"1.2",
   "page_action":{
     "default_icon":"asana-exporter-icon.png",
     "default_title":"Asana Time Tracker",
